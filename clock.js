@@ -77,4 +77,5 @@ function drawHand(ctx, pos, length, width) {
     ctx.rotate(-pos);
 }
 
+drawClock();
 setInterval(drawClock, 1000);
