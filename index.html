@@ -5,25 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Page</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Personal Page</h1>
-    </header>
-    <section>
-        <h2>About Me</h2>
-        <p>Hello! My name is John Doe. I am a software developer with a passion for creating innovative solutions to complex problems. I have experience in various programming languages and enjoy working on both front-end and back-end development.</p>
-    </section>
-    <section>
-        <h2>Contact Information</h2>
-        <p>Email: john.doe@example.com</p>
-        <p>Social Media:</p>
-        <ul>
-            <li><a href="https://twitter.com/johndoe">Twitter</a></li>
-            <li><a href="https://linkedin.com/in/johndoe">LinkedIn</a></li>
-        </ul>
-    </section>
-    <canvas id="clock" width="400" height="400"></canvas>
+    <div class="container">
+        <header class="text-center bg-light p-3 mb-4">
+            <h1>Personal Page</h1>
+        </header>
+        <section class="row">
+            <div class="col">
+                <h2>About Me</h2>
+                <p>Hello! My name is John Doe. I am a software developer with a passion for creating innovative solutions to complex problems. I have experience in various programming languages and enjoy working on both front-end and back-end development.</p>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col">
+                <h2>Contact Information</h2>
+                <p>Email: john.doe@example.com</p>
+                <p>Social Media:</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-action"><a href="https://twitter.com/johndoe">Twitter</a></li>
+                    <li class="list-group-item list-group-item-action"><a href="https://linkedin.com/in/johndoe">LinkedIn</a></li>
+                </ul>
+            </div>
+        </section>
+        <div class="row">
+            <div class="col text-center">
+                <canvas id="clock" width="400" height="400" class="d-block mx-auto my-4"></canvas>
+            </div>
+        </div>
+    </div>
     <script src="clock.js"></script>
 </body>
 </html>
