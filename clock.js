@@ -70,7 +70,21 @@ function drawHand(ctx, pos, length, width) {
     ctx.beginPath();
     ctx.lineWidth = width;
     ctx.lineCap = 'round';
-    ctx.strokeStyle = '#0f0'; // Greenish color for the hands
+    ctx.strokeStyle = '#333'; // Dark gray color for the hands
+    ctx.shadowColor = 'rgba(0, 0, 0, 0.5)'; // Shadow color
+    ctx.shadowBlur = 10; // Shadow blur
+    ctx.shadowOffsetX = 3; // Shadow offset X
+    ctx.shadowOffsetY = 3; // Shadow offset Y
+    ctx.moveTo(0, 0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+
+    // Outline for the hands
+    ctx.beginPath();
+    ctx.lineWidth = width + 2; // Slightly thicker for the outline
+    ctx.strokeStyle = '#fff'; // White color for the outline
     ctx.moveTo(0, 0);
     ctx.rotate(pos);
     ctx.lineTo(0, -length);
