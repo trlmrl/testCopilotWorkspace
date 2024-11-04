@@ -14,12 +14,12 @@ function drawFace(ctx, radius) {
 
     ctx.beginPath();
     ctx.arc(0, 0, radius, 0, 2 * Math.PI);
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = '#0f0'; // Greenish background color
     ctx.fill();
 
     grad = ctx.createRadialGradient(0, 0, radius * 0.95, 0, 0, radius * 1.05);
     grad.addColorStop(0, '#333');
-    grad.addColorStop(0.5, 'white');
+    grad.addColorStop(0.5, '#0f0'); // Greenish background color
     grad.addColorStop(1, '#333');
     ctx.strokeStyle = grad;
     ctx.lineWidth = radius * 0.1;
@@ -34,7 +34,7 @@ function drawFace(ctx, radius) {
 function drawNumbers(ctx, radius) {
     let ang;
     let num;
-    ctx.font = radius * 0.15 + 'px arial';
+    ctx.font = radius * 0.15 + 'px Arial'; // Fallout 3 style font
     ctx.textBaseline = 'middle';
     ctx.textAlign = 'center';
     for (num = 1; num < 13; num++) {
@@ -70,6 +70,7 @@ function drawHand(ctx, pos, length, width) {
     ctx.beginPath();
     ctx.lineWidth = width;
     ctx.lineCap = 'round';
+    ctx.strokeStyle = '#0f0'; // Greenish color for the hands
     ctx.moveTo(0, 0);
     ctx.rotate(pos);
     ctx.lineTo(0, -length);
