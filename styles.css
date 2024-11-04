@@ -1,6 +1,10 @@
 #clock {
-    font-size: 2em;
-    text-align: center;
-    padding: 10px;
-    margin: 20px;
+    width: 400px;
+    height: 400px;
+    display: block;
+    margin: 20px auto;
+    background-color: white;
+    border: 5px solid #333;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
